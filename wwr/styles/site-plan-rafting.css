@@ -7,10 +7,10 @@ Fonts are separated by a & */
 
 :root {
   /* change the values below to your colors from your palette */
-  --primary-color: #402e64  ;
-  --secondary-color: #bf393a ;
-  --accent1-color: #418f8d;
-  --accent2-color: #ebebeb;
+  --primary-color: #744253;
+  --secondary-color: #B49286 ;
+  --accent1-color: #C78283;
+  --accent2-color: #edddd0;
 
   /* change the values below to your chosen font(s) */
   --heading-font: Tagesschrift;
@@ -21,11 +21,11 @@ Fonts are separated by a & */
   --headline-color-on-color: #ebebeb; /* headlines on a colored background */ 
   --paragraph-color-on-white: #000000; /* paragraph text on a white background */ 
   --paragraph-color-on-color: #ebebeb; /* paragraph text on a colored background */ 
-  --paragraph-background-color:#402e64;
+  --paragraph-background-color:#B49286;
   --nav-link-color: #ebebeb;
-  --nav-background-color: #418f8d;
+  --nav-background-color: #744253;
   --nav-hover-link-color: #ebebeb;
-  --nav-hover-background-color: #649291;
+  --nav-hover-background-color: #C78283;
 }
 
 
