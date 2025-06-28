@@ -172,3 +172,19 @@ nav a:hover {
   border-top: 1px solid;
   border-right: 1px solid;
 }
+
+.home-img{
+
+  width: 50%;
+  height: 50%;
+}
+
+.eur-jap-img{
+  width: 50%;
+  height: 50%;
+}
+
+.africa-img{
+  width: 50%;
+  height: 50%;
+}
