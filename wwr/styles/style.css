@@ -239,6 +239,73 @@ footer .social img{
     width: 64px
 }
 
+#faq {
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: -100px;
+}
+#faq-box{
+    grid-column: 1/4;
+    grid-row: 1/3;
+    z-index: -1;
+}
+#faq-img{
+    width: 100%;
+}
+#faq-msg{
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-top: 100px;
+}
+.faq-title {
+    font-family: Tagesschrift, 'Bradley Hand', sans-serif;
+    color:rgb(51, 50, 46);
+    font-size: 2em;
+    margin-top: 10px;
+
+}
+
+.faq-container{
+    max-width: 1000px;
+    margin: 24px auto;
+    font-family: 'Nunito Sans', Arial, sans-serif;
+}
+details .content{
+    padding: 16px;
+    line-height: 2;
+    
+}
+details summary{
+    text-align:center;
+    cursor: pointer;
+    font-family: Tagesschrift, 'Bradley Hand', sans-serif;;
+    color:rgb(226, 218, 200);
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 24px;
+    background-color:#744253;
+    user-select: none; 
+}
+details summary:hover {
+    opacity: .6;
+
+}
+details {
+    background: #B49286;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px #6f7364;
+    text-align: left;
+    overflow: hidden;
+    color:rgb(226, 218, 200);
+    margin-bottom: 25px;
+    
+}
+details[open] summary{
+    background: #C78283;
+
+}
 
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
