@@ -242,22 +242,25 @@ footer .social img{
 #faq {
     display:grid;
     grid-template-columns: 1fr 3fr 1fr;
+    /* grid-template-rows: 1fr 100px 1fr; */
     margin-top: -100px;
 }
 #faq-box{
+    
     grid-column: 1/4;
-    grid-row: 1/3;
+    grid-row: 2/3;
     z-index: -1;
 }
 #faq-img{
+    margin-top: 50px;
     width: 100%;
 }
-#faq-msg{
+/* #faq-msg{
     text-align: center;
     grid-column: 2/3;
     grid-row: 1/2;
     margin-top: 100px;
-}
+} */
 .faq-title {
     font-family: Tagesschrift, 'Bradley Hand', sans-serif;
     color:rgb(51, 50, 46);
