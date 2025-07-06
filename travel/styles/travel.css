@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Short+Stack&display=swap');
+
 .home-grid img{
     width:50%;
 }
@@ -10,4 +12,140 @@
 
 .africa-grid img{
     width: 50%;
+}
+body{
+    background-color:white;
+    font-family: "Short Stack", Lato, Helvetica, sans-serif;;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+
+}
+#content{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+header{
+    background-color:#90D5FF;
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+
+#logo-link{
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+
+.logo{
+    width: 150px;
+}
+
+nav {
+    display:flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+nav a {
+    text-align: center;
+    color:black;
+    text-decoration: none;
+    padding: 35px;
+}
+
+nav a:hover {
+    background-color:#FB9F89;
+    color:white;
+}
+.intro-title{
+    font-family: "Nanum Pen Script";
+    font-size: 50px;
+    grid-column: 5/ 7;
+    margin-top: auto;
+}
+
+#intro-msg{
+    text-align: center;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(10, 1fr);
+}
+
+#intro-msg p{
+    width: auto;
+    grid-row: 2 /3;
+    grid-column: 3 / 9 ;
+}
+
+.home-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family:"Nanum Pen Script";
+}
+
+main section{
+    text-align: center;
+}
+.japan-card{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+ .euro-card{
+    grid-column: 2/3;
+    grid-row: 2/3;
+ }
+.africa-card{
+    grid-column: 3/4;
+    grid-row: 2/3
+}
+.japan-card, .euro-card, .africa-card{
+    margin: 75px 0px;
+}
+
+.card-img{
+    border: 10px solid #95BF74 ;
+    border-radius: 10px;
+    width: 100%;
+    height: auto ;
+    /* transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364; */
+}
+
+/* .river
+.rivers-card h2, .rapids-card h2, .camping-card h2{
+    color:#31292a;
+} */
+footer{
+    background-color:#90D5FF;
+    color:black;
+    padding: 25px 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a{
+    color:black;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color:white;
+}
+
+footer p{
+    font-size: 0.9em
+}
+
+footer p:hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+footer .social img{
+    padding-top: 15px;
+}
+
+.x{
+    width: 64px
 }
