@@ -29,6 +29,7 @@ header{
     background-color:#90D5FF;
     display: grid;
     grid-template-columns: 150px auto;
+    height: 100px;
 }
 
 #logo-link{
@@ -38,7 +39,7 @@ header{
 }
 
 .logo{
-    width: 150px;
+    width: 80px;
 }
 
 nav {
@@ -46,16 +47,31 @@ nav {
     justify-content: space-around;
     
 }
-nav a {
+nav a{
     text-align: center;
     color:black;
     text-decoration: none;
-    padding: 55px;
+    align-content: center;
 }
 
 nav a:hover {
-    background-color:#FB9F89;
+    background-color:#95BF74;
     color:white;
+    padding: 15px;
+}
+
+.button-box{
+    text-align: center;
+    align-content: center;
+}
+.book{
+   background-color:#5A3A31;
+   color:white;
+   text-decoration: none;
+   font-size: 18px;
+   padding: 15px 30px;
+   margin-top: 50px;
+   border-radius: 5px;
 }
 .intro-title{
     font-family: "Nanum Pen Script";;
@@ -82,7 +98,6 @@ nav a:hover {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     font-family:"Nanum Pen Script";
-
 }
 
 main section{
@@ -106,18 +121,12 @@ main section{
 }
 
 .card-img{
-    border: 10px solid #95BF74 ;
+    border: 10px solid #FB9F89;
     border-radius: 10px;
-  
-  
-    /* transition: transform .5s;
-    box-shadow: 5px 5px 10px #6f7364; */
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
 }
 
-/* .river
-.rivers-card h2, .rapids-card h2, .camping-card h2{
-    color:#31292a;
-} */
 footer{
     background-color:#90D5FF;
     color:black;
@@ -152,4 +161,98 @@ footer .social img{
 
 .x{
     width: 64px
+}
+
+/* Africa PAge */
+
+.extra{
+    display: none;
+}
+
+p{
+    display:inline;
+}
+
+input[type="checkbox"]{
+    height: 2em;
+    display: block;
+    appearance: none;
+}
+label{
+    position: relative;
+    padding: 1ex;
+    background-color: #5A3A31;
+    color: antiquewhite;
+    border-radius: 10px;
+}
+
+label::before{
+    content:"Read More";
+}
+
+input[type="checkbox"]:checked ~ label:before{
+    content: "Read Less";
+}
+
+.dots:has(~input[type="checkbox"]:checked){
+    display: none;
+}
+
+.extra:has(~input[type="checkbox"]:checked){
+    display: inline;
+}
+/* second button */
+
+.extra2{
+    display: none;
+}
+
+.dots2:has(~input[type="checkbox"]:checked){
+    display: none;
+}
+
+.extra2:has(~input[type="checkbox"]:checked){
+    display: inline;
+}
+/* third button */
+.extra3{
+    display: none;
+}
+
+.dots3:has(~input[type="checkbox"]:checked){
+    display: none;
+}
+
+.extra3:has(~input[type="checkbox"]:checked){
+    display: inline;
+}
+
+
+@media screen and (max-width: 900px) {
+    .home-grid {
+        display: block;
+        height: auto;
+    }
+    nav, footer {
+        flex-direction: column;
+    }
+    nav a, .button-box {
+        display: block;
+        padding: 15px;
+    }
+
+    .intro-title {
+        font-size: 25px;
+        color: #6f7364;
+    }
+    .japan-card, .euro-card, .africa-card { 
+        margin: 50px auto;
+        width: 60%;
+    }
+    #background {
+        display: none;
+    }
+    footer {
+        margin-top: 25px;
+    }
 }
