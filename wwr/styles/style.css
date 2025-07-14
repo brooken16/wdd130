@@ -153,7 +153,7 @@ main section img{
 h2{
     margin: 0;
 }
-.river
+
 .rivers-card h2, .rapids-card h2, .camping-card h2{
     color:#31292a;
 }
@@ -238,7 +238,7 @@ footer .social img{
 .x{
     width: 64px
 }
-
+/* New Page */
 #faq {
     display:grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -277,8 +277,8 @@ footer .social img{
 details .content{
     padding: 16px;
     line-height: 2;
-    
 }
+
 details summary{
     text-align:center;
     cursor: pointer;

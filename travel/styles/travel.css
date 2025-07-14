@@ -1,36 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Short+Stack&display=swap');
 
-.home-grid img{
-    width:75%;
-}
-.euro-grid img{
-    width:50%;
-}
-#hero-img{
-    width: 50%;
-}
 
-.africa-grid img{
-    width: 50%;
-}
 body{
-    background-color:white;
-    font-family: "Short Stack", Lato, Helvetica, sans-serif;;
+    background-color:rgb(236, 217, 203);
+    font-family: "Short Stack", Lato, Helvetica, sans-serif;
     font-size: 20px;
     margin: 0;
     padding: 0;
 
 }
-#content{
+.content{
     max-width: 1600px;
     margin: 0 auto;
 }
-header{
+
+ header{
+    position: relative;
     background-color:#90D5FF;
     display: grid;
     grid-template-columns: 150px auto;
-    height: 100px;
-}
+    height: 100px; /* Fixed height for the header */
+    width: 100%; /* Ensure it spans full width if inside .content */
+    top: 0; /* Important if using position: fixed; */
+    left: 0; /* Important if using position: fixed; */
+    z-index: 100;
+} 
 
 #logo-link{
     padding-top: 5px;
@@ -44,37 +38,50 @@ header{
 
 nav {
     display: flex;
+    align-items: center;      /* Vertically center nav items */
     justify-content: space-around;
+    gap: 20px;                /* Space between links and button */
+    height: 100%;             /* Fill header height */
+    padding: 0 10px; 
     
 }
 nav a{
     text-align: center;
-    color:black;
+    color: black;
     text-decoration: none;
     align-content: center;
+    padding: 10px 15px; 
 }
 
 nav a:hover {
     background-color:#95BF74;
     color:white;
-    padding: 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
 .button-box{
+    display: flex;
+    justify-content: center;
     text-align: center;
-    align-content: center;
+    align-items: center;
+    margin: 0;
 }
 .book{
    background-color:#5A3A31;
    color:white;
    text-decoration: none;
-   font-size: 18px;
-   padding: 15px 30px;
-   margin-top: 50px;
+   font-size: 16px;
+   padding: 10px 15px;
+   margin: 0;
    border-radius: 5px;
+   align-self: center;
+   cursor: pointer;
+   white-space: nowrap;
 }
+
 .intro-title{
-    font-family: "Nanum Pen Script";;
+    font-family: "Nanum Pen Script";
 
     text-align: center;
 }
@@ -118,6 +125,9 @@ main section{
 .japan-card, .euro-card, .africa-card{
     margin: 75px 0px;
 
+}
+.home-grid img{
+    width:75%;
 }
 
 .card-img{
@@ -163,7 +173,159 @@ footer .social img{
     width: 64px
 }
 
-/* Africa PAge */
+/* Europe/Japan Page */
+
+.japan-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    margin: 60px 10%;
+}
+.japan-title{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size:200%;
+}
+.japan-section p{
+    text-align: center;
+}
+
+.japan-section img{
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+
+.cherry-img {
+    width: 100%;           /* Fill available width */
+    max-width: 500px;      /* Limit how wide it can get */
+    height: auto;
+    aspect-ratio: 5 / 3;   /* Make it 3x as wide as it is tall */
+    object-fit: cover;     /* Crop edges slightly if needed */
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    justify-self: center;
+    
+}
+.polaroid-vertical {
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  max-width: 350px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px 40px 25px;
+  justify-self: center;
+}
+
+.polaroid-vertical img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.polaroid-vertical .caption {
+  background: white;
+  padding: 12px 10px 18px 10px; /* extra bottom padding for Polaroid feel */
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 20px;
+}
+
+.polaroid-horizontal {
+  display: flex;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  max-width: 600px;
+  overflow: hidden;
+  align-items: stretch; /* make image & caption same height */
+  justify-self: center; /* center in grid cell if needed */
+  margin: 0 auto;       /* center block horizontally */
+  padding: 20px 25px 30px 25px;
+}
+
+.polaroid-horizontal img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px 0 0 8px; /* rounded corners on left side */
+  flex-shrink: 0;
+}
+.polaroid-horizontal .caption {
+  writing-mode: vertical-rl;   /* vertical text, right to left */
+  transform: rotate(180deg);   /* flip to read top-to-bottom */
+  font-size: 24px;
+  font-family: 'Nanum Pen Script', cursive;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 8px 8px 0;
+  width: auto;
+  min-width: 50px;
+}
+
+
+/* europe section */
+.euro-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 60px 10%;
+  gap: 40px;
+}
+
+.euro-section .text-wrapper {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.euro-section .images-wrapper {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  align-items: center;
+}
+
+.euro-section .images-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+
+}
+.euro-section .polaroid-vertical {
+  max-width: 250px; /* same as zen garden */
+  width: 100%;
+}
+
+.euro-title{
+    font-family:'Nanum Pen Script', cursive;
+    font-size: 200%;
+}
+/* Africa Page */
+
+.africa-grid img{
+    width: 50%;
+}
+#hero-img{
+    width: 50%;
+}
 
 .extra{
     display: none;
@@ -226,33 +388,68 @@ input[type="checkbox"]:checked ~ label:before{
 .extra3:has(~input[type="checkbox"]:checked){
     display: inline;
 }
-
-
+/* For screens up to 900px */
 @media screen and (max-width: 900px) {
-    .home-grid {
-        display: block;
-        height: auto;
-    }
-    nav, footer {
-        flex-direction: column;
-    }
-    nav a, .button-box {
-        display: block;
-        padding: 15px;
-    }
+  .home-grid {
+    display: block;
+    height: auto;
+    padding: 150px;
+  }
+  nav, footer {
+    flex-direction: column;
+  }
+  nav a, .button-box {
+    display: block;
+    padding: 15px;
+  }
+  .intro-title {
+    font-size: 25px;
+    color: #6f7364;
+  }
+  .japan-card, .euro-card, .africa-card { 
+    margin: 50px auto;
+    width: 60%;
+  }
+  #background {
+    display: none;
+  }
+  footer {
+    margin-top: 25px;
+  }
+  .content {
+    padding-top: 220px; /* keep this here to avoid duplication */
+  }
+}
 
-    .intro-title {
-        font-size: 25px;
-        color: #6f7364;
-    }
-    .japan-card, .euro-card, .africa-card { 
-        margin: 50px auto;
-        width: 60%;
-    }
-    #background {
-        display: none;
-    }
-    footer {
-        margin-top: 25px;
-    }
+/* For screens up to 768px */
+@media screen and (max-width: 768px) {
+  /* Sections stack to one column with centered text */
+  .japan-section,
+  .euro-section {
+    display: flex;               /* switch to flex for euro-section */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px 5%;             /* add some side margin */
+    direction: ltr;              /* ensure LTR */
+  }
+  
+  /* Text and images full width & centered */
+  .euro-section .text-wrapper,
+  .euro-section .images-wrapper {
+    width: 100%;
+    max-width: 400px;            /* optional max-width for readability */
+  }
+
+  /* Space between text and images */
+  .euro-section .images-wrapper {
+    margin-top: 30px;
+  }
+  
+  /* Center polaroid images inside images-wrapper */
+  .euro-section .polaroid-vertical {
+    margin: 0 auto;
+    max-width: 350px;
+    width: 100%;
+  }
 }
