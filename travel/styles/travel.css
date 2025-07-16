@@ -319,14 +319,46 @@ footer .social img{
     font-size: 200%;
 }
 /* Africa Page */
-
-.africa-grid img{
-    width: 50%;
+#hero-msg{
+  text-align: center;
 }
+#hero-msg p{
+  margin: 50px;
+}
+.hero-title{
+  font-family:'Nanum Pen Script', cursive;
+  font-size: 200%;
+  margin: 50px;
+}
+
 #hero-img{
-    width: 50%;
+margin-top: 50px;
+width: 100%;           /* Fill available width */
+max-width: 1500px;      /* Limit how wide it can get */
+height: auto;
+aspect-ratio: 10 / 1;   /* Make it 3x as wide as it is tall */
+object-fit: cover; 
+object-position: 0 44%;    /* Crop edges slightly if needed */
+border-radius: 10px;
+border: 5px solid #95BF74;
+justify-self: center;
+align-items: center;
+margin-bottom: 100px;
+}
+.africa-grid img{
+  width: 50%;
+}
+.africa-main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
 }
 
+#examples-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+/*  first button */
 .extra{
     display: none;
 }
