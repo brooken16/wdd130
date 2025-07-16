@@ -2,7 +2,7 @@
 
 
 body{
-    background-color:rgb(236, 217, 203);
+    background-color:white;
     font-family: "Short Stack", Lato, Helvetica, sans-serif;
     font-size: 20px;
     margin: 0;
@@ -276,7 +276,7 @@ footer .social img{
 
 /* europe section */
 .euro-section {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-items: flex-start;
   margin: 60px 10%;
@@ -317,6 +317,18 @@ footer .social img{
 .euro-title{
     font-family:'Nanum Pen Script', cursive;
     font-size: 200%;
+}
+div.scroll-container {
+  background-color: #95BF74;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+
+  height: 400px;
 }
 /* Africa Page */
 #hero-msg{
@@ -420,6 +432,41 @@ input[type="checkbox"]:checked ~ label:before{
 .extra3:has(~input[type="checkbox"]:checked){
     display: inline;
 }
+
+/* Contact Page */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 50px;
+  text-align: center;
+  align-items: center;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+
 /* For screens up to 900px */
 @media screen and (max-width: 900px) {
   .home-grid {
