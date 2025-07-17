@@ -283,14 +283,12 @@ footer .social img{
   gap: 40px;
 }
 
-.euro-section .text-wrapper {
-  flex: 1 1 45%;
-  display: flex;
-  flex-direction: column;
+.euro-section .text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: flex-start;
-  gap: 20px;
-  text-align: center;
-  align-items: center;
+  gap: 50px;
+  text-align: left;
 }
 
 .euro-section .images-wrapper {
@@ -323,6 +321,7 @@ div.scroll-container {
   overflow: auto;
   white-space: nowrap;
   padding: 10px;
+  margin: 50px auto;
 }
 
 div.scroll-container img {
@@ -369,6 +368,7 @@ margin-bottom: 100px;
 #examples-box{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  background-color: #FB9F89;
 }
 /*  first button */
 .extra{
@@ -388,7 +388,7 @@ label{
     position: relative;
     padding: 1ex;
     background-color: #5A3A31;
-    color: antiquewhite;
+    color: white;
     border-radius: 10px;
 }
 
@@ -398,7 +398,7 @@ label::before{
 
 input[type="checkbox"]:checked ~ label:before{
     content: "Read Less";
-}
+  }
 
 .dots:has(~input[type="checkbox"]:checked){
     display: none;
