@@ -391,14 +391,14 @@ align-items: center;
   height: auto;
   display: block;
   margin: 0 auto 15px auto;
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 
 .example-box {
   background-color: white;
   max-width: 400px;
   width: 100%;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   padding: 10px;
   text-align: left;
 }
