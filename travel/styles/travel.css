@@ -354,21 +354,76 @@ border-radius: 10px;
 border: 5px solid #95BF74;
 justify-self: center;
 align-items: center;
-margin-bottom: 100px;
+
 }
-.africa-grid img{
-  width: 50%;
+.africa-main img{
+  width: 65%;
+  border: 10px solid #95BF74;
+  border-radius: 100px;
+  
 }
 .africa-main{
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
+  align-items: center;
+  justify-items: center;
+  padding: 50px;
 }
 
-#examples-box{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.africa-main p{
+  margin: 55px;
+  /* grid-column: 1 / 2; */
+  /* grid-row: 1 / 2; */
+}
+#examples-box {
+  display: flex;
+  justify-content: center;      /* Center the row as a whole */
+  align-items: flex-start;      /* Align items to the top */
+  gap: 100px;                    /* Space between the boxes */
   background-color: #FB9F89;
+  padding: 40px 20px;
+  flex-wrap: wrap;              /* Allows wrapping on smaller screens */
+}
+#examples-box img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px auto;
+  border-radius: 15px;
+}
+
+.example-box {
+  background-color: white;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: left;
+}
+
+/* .example-box { */
+  /* max-width: 700px; */
+  /* width: 90%; */
+  /* background-color: white; */
+  /* padding: 20px; */
+  /* border-radius: 20px; */
+  /* box-shadow: 5px 5px 15px rgba(0,0,0,0.15); */
+  /* text-align: center; */
+/* } */
+
+/* #examples-box{ */
+/*    */
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* background-color: #FB9F89; */
+/* } */
+
+#examples-box img{
+  width: 50%;
+  justify-items: center;
+  align-items: center;
 }
 /*  first button */
 .extra{
@@ -384,15 +439,15 @@ input[type="checkbox"]{
     display: block;
     appearance: none;
 }
-label{
-    position: relative;
-    padding: 1ex;
-    background-color: #5A3A31;
-    color: white;
-    border-radius: 10px;
+#labelbtn{
+  position: relative;
+  padding: 1ex;
+  background-color: #5A3A31;
+  color: white;
+  border-radius: 10px;
 }
 
-label::before{
+#labelbtn::before{
     content:"Read More";
 }
 
@@ -434,39 +489,16 @@ input[type="checkbox"]:checked ~ label:before{
 }
 
 /* Contact Page */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: 50px;
-  text-align: center;
-  align-items: center;
+.contact{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
-
-.title {
-  color: grey;
-  font-size: 18px;
+.leftbox{
+  background-color: #5A3A31;
 }
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
+.info p{
+  grid-column: 2 / 3;
 }
-
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
-
-
 /* For screens up to 900px */
 @media screen and (max-width: 900px) {
   .home-grid {
